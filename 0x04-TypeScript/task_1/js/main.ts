@@ -3,8 +3,9 @@ interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
   fullTimeEmployee: boolean;
+  yearsOfExperience?: number;
   location: string;
-  [key: string]: any; // Index signature for additional properties
+  [key: string]: any;
 }
 
 interface Directors extends Teacher {
@@ -14,6 +15,7 @@ interface Directors extends Teacher {
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
+
 
 
 const teacher3: Teacher = {
@@ -36,7 +38,10 @@ const director1: Directors = {
 
 console.log(director1);
 
-let myPrintTeacher: printTeacherFunction = function(firstName: string, lastName: string): string {
-    return `${firstName.charAt(0)}. ${lastName}`;
+// Implement the function
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+  return `${firstName.charAt(0)}. ${lastName}`;
 };
+
+console.log(printTeacher("John", "Doe"));
 
