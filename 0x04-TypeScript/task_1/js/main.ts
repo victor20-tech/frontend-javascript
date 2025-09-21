@@ -23,7 +23,7 @@ const teacher3: Teacher = {
   fullTimeEmployee: false,
   lastName: 'Doe',
   location: 'London',
-  contract: false, // This is an additional property allowed by the index signature
+  contract: false,
 };
 
 console.log(teacher3);
