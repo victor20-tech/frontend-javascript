@@ -89,6 +89,5 @@ Each task is in its own directory (`task_0/`, `task_1/`, etc.) and includes:
 
 ### 1. Clone the repository
 ```bash
-git clone 
-cd <project-folder>
+gh repo clone victor20-tech/frontend-javascript
 
