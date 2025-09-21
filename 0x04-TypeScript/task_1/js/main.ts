@@ -3,7 +3,6 @@ interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
   fullTimeEmployee: boolean;
-  yearsOfExperience?: number; // Optional property
   location: string;
   [key: string]: any; // Index signature for additional properties
 }
@@ -21,13 +20,3 @@ const teacher3: Teacher = {
 };
 
 console.log(teacher3);
-
-const director1: Directors = {
-  firstName: 'John',
-  lastName: 'Doe',
-  location: 'London',
-  fullTimeEmployee: true,
-  numberOfReports: 17,
-};
-console.log(director1);
-
