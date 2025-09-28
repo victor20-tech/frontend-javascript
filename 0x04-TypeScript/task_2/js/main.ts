@@ -1,7 +1,6 @@
 // String literal type
 type Subjects = 'Math' | 'History';
 
-// function that uses the type
 function teachClass(todayClass: Subjects): string {
   if (todayClass === 'Math') {
     return 'Teaching Math';
