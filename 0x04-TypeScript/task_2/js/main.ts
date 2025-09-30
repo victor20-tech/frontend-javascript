@@ -1,3 +1,14 @@
+// String literal type
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass:Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  }
+  return 'Teaching History';
+}
+
+
 interface DirectorInterface {
   workFromHome(): string;
   getCoffeeBreak(): string;
@@ -39,14 +50,22 @@ export function isDirector(employee: Employee): employee is Director {
 
 function executeWork(employee: Employee): string {
   if (isDirector(employee)) {
-    return employee.workDirectorTasks(); 
+    return employee.workDirectorTasks();
   } else {
-    return employee.workTeacherTasks(); 
+    return employee.workTeacherTasks();
   }
 }
 
+// Testing for Type Predicates and Union Types
 console.log("Testing with a salary of 200 (should be a Teacher):");
 console.log(executeWork(createEmployee(200)));
 
 console.log("\nTesting with a salary of 1000 (should be a Director):");
 console.log(executeWork(createEmployee(1000)));
+
+// Testing for String Literal Type
+console.log("\nTesting teachClass with 'Math':");
+console.log(teachClass('Math'));
+
+console.log("\nTesting teachClass with 'History':");
+console.log(teachClass('History'));
